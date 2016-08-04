@@ -19,6 +19,19 @@
 
 //Functions
 
+var queryURL = "http://api.myapifilms.com/imdb/idIMDB?title=matrix&token=66a93a66-d0a3-4bcf-b682-329ad22dc9c3";
+			   console.log(queryURL)
+
+$.ajax({url: queryURL, method: 'GET'})
+		.done(function(response) {
+
+		console.log(response);
+		
+	
+		});
+
+
+
 //"Page one" (index) functions
 //onClick to submit 
 	//get .val() input
