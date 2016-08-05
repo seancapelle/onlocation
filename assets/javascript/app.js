@@ -97,21 +97,7 @@ var places = { "Guatemala": ["star wars", "batman"] };
 //"Page three" (movie) functions
 //Push poster and trailer variables to a div
 //Get poster
-var posterPush = function(){
 
-moviePick = "batman";	
-var queryURL = "http://www.omdbapi.com/?t=" + moviePick + "&y=&plot=short&r=json";
-
-	$.ajax({url: queryURL, method: 'GET'})
-		.done(function(response) {
-			
-			var poster = response.object.poster;
-		
-	});
-
-
-};
-posterPush();
 
 //Display locationPic
 
