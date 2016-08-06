@@ -16,56 +16,83 @@
 //trailer
 //movieName
 
+var movieList = [];
 
 //Functions
-//Search by location
-var locationSearch = function(){
-var locationPick = "Delaware".split(' ').join('+');
-var queryURL = "http://www.filmaps.com/xml?loc=baltimore";
+//Search by movie
+var movieSearch = function(){
+	//Take user input and add "+"" between each word
+	var moviePick = "batman".split(' ').join('+'); //#moviePick.val();
+	//API URL with user's movie
+	var queryURL = "http://api.myapifilms.com/imdb/idIMDB?title=" + moviePick + "&token=66a93a66-d0a3-4bcf-b682-329ad22dc9c3";
 
+	//Ajax call
 	$.ajax({url: queryURL, method: 'GET'})
-	
+		//Ajax response
 		.done(function(response) {
 
 			console.log(response);
-		
-	});
 
-};
+			//Create movie object
+			var movie = {
+				title: response.data.movies[0].title,
+				year: response.data.movies[0].year,
+				rating: response.data.movies[0].rated,
+				plot: response.data.movies[0].simplePlot,
+				poster: response.data.movies[0].urlPoster,
+				location: response.data.movies[0].filmingLocations.toString(), 
+			};
 
-//Search by movie
-var movieSearch = function(){
-var moviePick = "batman".split(' ').join('+'); //#moviePick.val();
-var queryURL = "http://api.myapifilms.com/imdb/idIMDB?title=" + moviePick + "&token=66a93a66-d0a3-4bcf-b682-329ad22dc9c3";
-
-//Ajax call
-$.ajax({url: queryURL, method: 'GET'})
-	//Ajax response
-	.done(function(response) {
-
-		console.log(response);
-
-		//Create movie object
-		var movie = {
-			title: response.data.movies[0].title,
-			year: response.data.movies[0].year,
-			rating: response.data.movies[0].rated,
-			plot: response.data.movies[0].simplePlot,
-			poster: response.data.movies[0].urlPoster, 
-		};
-
-		//Push movie properties
-		//movie.title
-		//movie.year
-		//movie.rating
-		//movie.plot
-		//movie.poster
+			console.log(movie.location);
+			//Push movie properties
+			//movie.title
+			//movie.year
+			//movie.rating
+			//movie.plot
+			//movie.poster
+			//movie.location
 		
 	});
 }
+//Search by location
+var locationSearch = function(){
+	var locationPick = "England".split(' ').join('+');
+	var queryURL = "http://api.myapifilms.com/imdb/idIMDB?title=batman&token=66a93a66-d0a3-4bcf-b682-329ad22dc9c3";
 
-// locationSearch();
-movieSearch();
+		$.ajax({url: queryURL, method: 'GET'})
+		
+			.done(function(response) {
+
+			locationCheck(response, locationPick);
+			
+		});
+};
+
+var locationCheck = function(response, locationPick) {
+
+	console.log(response);
+
+	for(i = 0; i < response.data.movies[0].filmingLocations.length; i++){
+
+
+		if (locationPick.indexOf(response.data.movies[0].filmingLocations[i])){
+
+			
+			
+		}
+		else {
+			
+			movieList.push(response.data.movies[0].title);
+			console.log(movieList);
+		}
+	}
+
+
+}
+
+//Call search functions
+locationSearch();
+// movieSearch();
 
 //object { "Guatemala":[], "Brazil": []   }
 //data.movies[0].filmingLocations[1]
@@ -100,4 +127,8 @@ var places = { "Guatemala": ["star wars", "batman"] };
 
 
 //Display locationPic
+
+//www.omdbapi.com/?s=star+wars
+
+//http://www.imdb.com/xml/find?q=starwars
 
