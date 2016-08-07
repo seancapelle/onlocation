@@ -1,71 +1,67 @@
-<!-- Which divs would be needed to pull user country select, state select, and movie title select? -->
-
 <!DOCTYPE html>
-<html lang="en">
-<html>
+<html class="full" lang="en">
+<!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
+
 <head>
-<meta charset="UTF-8">
-	<title>OnLocation</title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-	<!-- Bootswatch Styling for Improving the Aesthetics -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<!-- Font Awesome CSS Icons (For cool glyphicons) -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" />
-	<!-- Style to fix the issue of text extending past panel length -->
+    <title>The Big Picture - Start Bootstrap Template</title>
 
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/the-big-picture.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Quicksand" rel="stylesheet">
+
+    
 </head>
+
 <body>
-<div id="jumbotron">
-	<div class="logocontainer">
-	<h1 id="webname">OnLocation</h1>
-	<img id="sean" src="assets/images/sean.png" width="75px;" height="175px;">
-	<!-- <img id="natalee" src="assets/images/natalee.png" width="125px;" height="175px;">
-	<img id="angela" src="assets/images/angela.png" width="125px;" height="175px;"> -->
-	
-	
+ 	
+ 		<center><h1>ON LOCATION</h1></center>
+<div id="world">
+ 	 <center><img id="worldpic" src="http://static1.squarespace.com/static/53c729e6e4b0494a524c3dca/t/53c73124e4b041cf78424a9b/1405582726314/World+of+Film?format=500w" width="500px;" height="500px;"></center> </div>
 
+    
 </div>
-</div>
-</div>
+        
 
+
+    <!-- Page Content -->
 <div class="container">
-	<div id="emptyone"></div>
-	<div id="emptytwo"></div>
-	<div id="emptythree"></div>
-	<div id="emptyfour"></div>
+<div class="row">
+<div class="col-md-6 col-sm-12">
+               
+                <center><strong><p id="your-movie">See where your favorite movie was made!</p></center></strong>
 
-</div>
-</div>
-</div>
-
-<div class="containerworld">
-	<div class="rocketcontainer">
-	<div class="planet"></div>
-	<div class="rocket"></div>
-	<div class="dropdown"></div>
-	<div>
-	</div>
-	</div>
-	</div>
-	<div id="dropcontainer">
-  <button class="dropbtn">Search</button>
-  <div class="dropdown-content">
-    <a href="#">United States</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-	</div>
-	</div>
+                <center><form>
+	       <div class="form-group">
+							<strong><label id="titlebutton">Movie Title</label></strong><br>
+							<input type="text"  id= "countryNameInput" class="form-control">
+			</div>
+                            <!-- Submit button on home page -->
+                    <center><br><button type= submit id="submit">Submit</button></br></center>
 
 
+            </form></center>
+            </div>
+            </div>
+            </div>
+<br>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-<script src="assets/javascript/app.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
 </body>
+
 </html>

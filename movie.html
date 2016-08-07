@@ -1,26 +1,70 @@
-<!-- Divs needed for pushing poster image, movie title, plot synopsis, YouTube trailer, and Google Map image -->
+<!DOCTYPE html>
+<html class="full" lang="en">
+<!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<head>
 
-	<!-- Bootswatch Styling for Improving the Aesthetics -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<!-- Font Awesome CSS Icons (For cool glyphicons) -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link href="http://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" />
-	<!-- Style to fix the issue of text extending past panel length -->
+    <title>Onlocation</title>
 
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/the-big-picture.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Quicksand" rel="stylesheet">
+
+    
 </head>
+
 <body>
+    <!-- Title, Year, Rating -->
+<div id="containernav">
+<div id="rating"> Rating</div>
+<div id="year"> Year</div>
+<div id="title"> Movie Title</div>
 
-<div class="container">
-	<div id="emptyone"></div>
-	<div id="emptytwo"></div>
-	<div id="emptythree"></div>
-	<div id="emptyfour"></div>
+</div> 
+<br>       
 
+<!-- Poster and Trailer -->
+<div id="containerpostra">
+<div id="trailer"><h1> Trailer</h1></div>
+<div id="poster"><h1> Poster</h1></div>
+</div>
+
+<div id="containerplot">
+<div id="plot"><h1> Plot</h1></div>
+</div>
+
+<div id="containermap">
+<div id="map"><h1> Movie OnLocation</h1></div>
+</div>
+
+
+
+
+
+<!-- Home button to Index.html -->
+<div id="homebutton">
+<div class="containerbutton">
+<a href="index.html" class="btn btn-info" role="button">
+<center><input type="submit" class="btn btn-info" value="Home Button"></a></center>
 </div>
 </div>
-</div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    </body>
+
+    </html>
