@@ -1,11 +1,55 @@
-body{
-  background-image: url(http://vignette2.wikia.nocookie.net/youtaites/images/a/a9/Background-radial-gradient-dark.jpg/revision/latest?cb=20150214024058);
+html, body{
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
 }
 
-h1{
-  font-family: 'Muli', sans-serif;
-  color: red;
-  letter-spacing: 4px;
+#headercontainer{
+
+  padding-top: 5px;
+}
+#headercontainer2{
+  
+  padding-top: 2px;
+}
+#footer2{
+ padding-top: 100px;
+ margin-top: 2px;
+ text-align: center;
+  color: whitesmoke;
+  background:linear-gradient(to bottom, #8dd2d9 , #58c0c7);
+  box-shadow: 0px 1px 10px 0px rgba(149,149,149,1);
+  border-top: 1px solid #0000ff;
+
+
+}
+header {
+  margin: 0;
+  padding: 0.5%;
+  text-align: center;
+  color: whitesmoke;
+  background:linear-gradient(to bottom, #8dd2d9 , #58c0c7);
+  box-shadow: 0px 1px 10px 0px rgba(149,149,149,1);
+  border-bottom: 1px solid #0000ff;
+}
+
+#submit{
+  color:  grey;
+  margin-top: 10px;
+}
+
+#entermoviebutton{
+  color: #428bca;
+  padding-top: 5px;
+  margin-top: 5px;
+}
+
+#movie-posters{
+padding-left: 10px;
+padding-bottom: 5px;
+padding-top: 10px;
+padding-bottom: 10px;
 }
 
 #your-movie{
@@ -13,8 +57,23 @@ h1{
   font-family: 'Quicksand', sans-serif;
   letter-spacing: 2px;
   color: red;
+  margin-left: 200px;
+}
+#footer{
+  margin: 0;
+  padding: 0.5%;
+  text-align: center;
+  color: whitesmoke;
+  background:linear-gradient(to bottom, #8dd2d9 , #58c0c7);
+  box-shadow: 0px 1px 10px 0px rgba(149,149,149,1);
+  border-top: 1px solid #0000ff;
+
 }
 
+#group-logo{
+
+  padding-bottom: 10px;
+}
 
 #titlebutton{
 
@@ -26,42 +85,254 @@ h1{
 #title{
   float: right; 
   margin-right: 100px;
-  color: red;
+  color: black;
 }
 
 #year{
   float: right;
   margin-right: 120px;
-  color: red;
+  color: black;
 }
 
 #rating{
   float: right;
   margin-right: 130px;
-  color: red;
+  color: black;
 }
 #poster{
-  float: right;
-margin-right: 600px;
-margin-top: 50px;
-}
+  background-color: white;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0px 1px 10px 0px rgba(186,186,186,1);
+  margin-left: 2.5%;
+  overflow: auto;
+  padding: 5px 0 5px 5px;
+  float: left;
+  margin-top: 1%;
+  max-width: 250px;
+  max-height: 300px;
+  margin-bottom: 20px; 
+  padding-bottom: 20px;
+ }
 
-#trailer{
-  float: right;
-  margin-right: 600px;
-  margin-top: 50px;
+#youtubetrailer{
+  background-color: white;
+  height: auto;
+  width: 27%
+  margin: 1% 1% 1% 2.5%;
+  color: DarkSlateGray;
+  text-align: center;
+  border-radius: 4px;
+  float: left;
+  box-shadow: 0px 1px 10px 0px rgba(186,186,186,1);
+  padding-left: 0;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 #plot{
-  margin-top: 200px;
-  margin-left: 800px;
-}
+ background-color: white;
+  color: grey;
+  text-align: center;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0px 1px 10px 0px rgba(186,186,186,1);
+  float: right;
+  margin-top: 1%;
+  margin-right: 8%;
+ }
 
-#map{
-
+#googlemap{
+  background-color: white;
+  text-align: center;
+  height: 300px;
+  margin: 1%;
+  margin-left: 4%;
+  border-radius: 4px;
+  float: right;
+  box-shadow: 0px 1px 10px 0px rgba(186,186,186,1);
+  margin-right: 8%;
 }
 
 #homebutton{
   margin-top: 350px;
-  
+  color: #5bc0de;
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 768px){
+#poster{
+  margin: 5px auto;
+  float: none;
+  width: 40%;
+}
+#plot{
+  margin: auto;
+}
+#youtubetrailer{
+  float: none;
+  width: 40%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+#googlemap{
+  float: none;
+  margin-top: 10px;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px){
+#poster{
+  width: 26.5%;
+
+}
+
+}
+@media screen and (max-width: 1490px){
+#youtubetrailer{
+  width: 22.5%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+@media screen and (min-width: 1489px){
+  #poster{
+    width: 22.5%;
+  }
+}
+@media screen and (max-width: 1338px){
+#youtubetrailer{
+  width: 27%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#googlemap{
+  margin-right: 5%;
+}
+#plot{
+  margin-right: 5%;
+}
+#poster img{
+  max-width: 250px;
+  max-height: 300px;
+}
+}
+@media screen and (max-width: 1109px){
+#poster{
+  float: none;
+  margin: 5px auto;
+  width: 35%;
+}
+#poster img{
+  width: 95%;
+}
+#plot{
+  float: none;
+  margin-right: 0;
+  width: 100%
+}
+#youtubetrailer{
+  float: none;
+  margin: auto;
+  width: 35%;
+}
+#googlemap{
+  width: 100%;
+  margin-right: 0;
+  margin-top: 20px;
+}
+}
+@media screen and (max-width: 1109px){
+#poster{
+  float: none;
+  margin: 5px auto;
+  width: 35%;
+}
+#poster img{
+  width: 95%;
+}
+#plot{
+  float: none;
+  margin-right: 0;
+  width: 100%
+}
+#youtubetrailer{
+  float: none;
+  margin: auto;
+  width: 35%;
+}
+#googlemap{
+  width: 100%;
+  margin-right: 0;
+  margin-top: 20px;
+}
+}
+/*/*@media(min-width: 768px){
+#artistPic{
+  width: 24%;
+  margin-right:auto;
+}
+}*/
+
+@media only screen and (max-width: 900px) and (min-width: 725px){
+#poster{
+  width: 24%;
+}
+#poster img{
+  width: 95%;
+}
+}
+@media only screen and (max-width: 720px) and (min-width: 420px){
+#poster{
+  width: 50%;
+  margin: 5px auto;
+  float: none;
+}
+#poster img{
+  width: 98%;
+}
+#plot{
+  float: none;
+  margin: 10px auto;
+  width: 80%;
+}
+#youtubetrailer{
+  float: none;
+  margin: 10px auto;
+  width: 42%;
+}
+#googlemap{
+  float: none;
+  width: 80%;
+  margin: 10px auto;
+}
+}
+@media screen and (max-width: 415px){
+#youtubetrailer{
+  width: 80%;
+  margin: auto;
+}
+#poster{
+  width: 90%;
+  overflow: visible;
+  margin-bottom: 10px;
+}
+#poster img{
+  width: 98%;
+}
+#plot{
+  margin-right: 0;
+}
+#youtubetrailer{
+  float: none;
+}
+#googlemap{
+  float: none;
+  margin: 10px auto;
+}
 }

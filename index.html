@@ -4,63 +4,90 @@
 <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    
+    <!-- BootStrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <title>Onlocation</title>
+    <title>Onlocation Inc.</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/the-big-picture.css" rel="stylesheet">
+   <!-- Cascading Style Sheets -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Muli|Quicksand" rel="stylesheet">
-
+    
+    <!-- Add Firebase Here!! -->
+    
+    
+    <!-- Function to rotate the #film-reel image. The else if are for viewing on various browsers. -->
+    <script>
+    var looper;
+    var degrees = 0;
+    function rotateAnimation(el,speed){
+    var elem = document.getElementById(el);
+    if(navigator.userAgent.match("Chrome")){
+        elem.style.WebkitTransform = "rotate("+degrees+"deg)";
+    } else if(navigator.userAgent.match("Firefox")){
+        elem.style.MozTransform = "rotate("+degrees+"deg)";
+    } else if(navigator.userAgent.match("MSIE")){
+        elem.style.msTransform = "rotate("+degrees+"deg)";
+    } else if(navigator.userAgent.match("Opera")){
+        elem.style.OTransform = "rotate("+degrees+"deg)";
+    } else {
+        elem.style.transform = "rotate("+degrees+"deg)";
+    }
+    looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
+    degrees++;
+    if(degrees > 359){
+        degrees = 1;
+    }}
+   
+</script>
     
 </head>
 
 <body>
- 	
- 		<center><h1>ON LOCATION</h1></center>
-<div id="world">
- 	 <center><img id="worldpic" src="http://static1.squarespace.com/static/53c729e6e4b0494a524c3dca/t/53c73124e4b041cf78424a9b/1405582726314/World+of+Film?format=500w" width="500px;" height="500px;"></center> </div>
+<header>
+            <!-- This image will rotate on the index page. -->
+<div id="headercontainer">
+    <a href="index.html"><img id="film-reel" src="assets/images/film-reel.png" width="200px;" height="200px;"></a>
 
-    
-</div>
+</header></div>
+ 	                 
+                                   
         
+            <!-- Section for user to input their movie title -->
+<div id="main">
+                    <div class="jumbotron">
+                    <center><h1 id="">See where your favorite movie was filmed!</h1>
+                    <input type="text" id="search" name="Search">
+                    <br>
+                    <button type="button" id="entermoviebutton" class="btn btn-default">Enter Movie Title</button></div></center>
+                    </div>
+                    <br>
 
+<!-- Lets see if we can program on click to get the location of these posters. -->
+<div id="movie-posters" style="background: url(assets/images/ancient.jpg)">
+<div><img id="jedi" src="assets/images/jedi.jpg" width="163" height="200">
+<img id="amelie" src="assets/images/amelie.jpg" width="163" height="200">
+<img id="teen-wolf" src="assets/images/teen-wolf.jpg" width="163" height="200">
+<img id="titanic" src="assets/images/titanic.jpg" width="163" height="200">
+<img id="ghostbusters" src="assets/images/ghostbusters.jpg" width="163" height="200">
+<img id="maleficent" src="assets/images/maleficent.jpg" width="163" height="200">
+<img id="mitty" src="assets/images/mitty.jpg" width="163" height="200">
+<img id="jaws" src="assets/images/jaws.jpg" width="163" height="200">
+<img id="star-wars" src="assets/images/star-wars.jpg" width="163" height="200">
+</div></div>
 
-    <!-- Page Content -->
-<div class="container">
-<div class="row">
-<div class="col-md-6 col-sm-12">
-               
-                <center><strong><p id="your-movie">See where your favorite movie was filmed!</p></center></strong>
+<!--Footer with the team logo  -->
+<div id="footer"><center><a href="index.html"><img id="group-logo" src="assets/images/group-logo.png" width="80px;" height="100px;"></center></a>
 
-                <center><form>
-	       <div class="form-group">
-							<strong><label id="titlebutton">Movie Title</label></strong><br>
-							<input type="text"  id= "countryNameInput" class="form-control">
-			</div>
-                            <!-- Submit button on home page -->
-                    <center><br><button type= submit id="submit">Submit</button></br></center>
-
-
-            </form></center>
-            </div>
-            </div>
-            </div>
-<br>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
+<!-- This script calls the id# film reel to rotate at a speed of 30.   -->
+<script>rotateAnimation("film-reel",30);</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="./assets/javascript/app.js"></script>
+  
 </body>
 
 </html>

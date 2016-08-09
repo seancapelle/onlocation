@@ -11,45 +11,40 @@
 
     <title>Onlocation</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/the-big-picture.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Muli|Quicksand" rel="stylesheet">
-
-    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+              
+                <!-- Cascading style sheets -->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link href="https://fonts.googleapis.com/css?family=Muli|Quicksand" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Title, Year, Rating -->
-<div id="containernav">
-<div id="rating"> Rating</div>
-<div id="year"> Year</div>
-<div id="title"> Movie Title</div>
+<header>
+<div id="headercontainer2">
+    <a href="index.html"><img id="movie-logo" src="assets/images/group-logo.png" width="140px;" height="110px;"></a>
+
+</header></div>
+    <!-- Title, Year, Rating API's Divs-->
+<div id="containernavbar">
+<div id="rating" class="col-sm-3"> Rating</div>
+<div id="year" class="col-sm-3"> Year</div>
+<div id="title" class="col-sm-3"> Movie Title</div>
 
 </div> 
 <br>       
-
-<!-- Poster and Trailer -->
-<div id="containerpostra">
-<div id="trailer"><h1> Trailer</h1></div>
-<div id="poster"><h1> Poster</h1></div>
-</div>
-
-<div id="containerplot">
-<div id="plot"><h1> Plot</h1></div>
-</div>
-
-<div id="containermap">
-<div id="map"><h1> Movie OnLocation</h1></div>
-</div>
-
-
-
-
-
+                <!-- API's Divs -->
+                <div id="moviepage">
+                <div class="row">
+                    <div id="poster" class="col-sm-4"><h2>Poster</h2></div>
+                    <div id="plot" class="col-sm-7"><h2>Movie Plot</h2></div>
+                </div>
+                
+                <div class="row" id="bottomrow">
+                     <div id="youtubetrailer" class="col-sm-3">Trailer</div>
+                     <div id="googlemap" class="col-sm-7">Onlocation Map</div>
+               
 <!-- Home button to Index.html -->
 <div id="homebutton">
 <div class="containerbutton">
@@ -57,13 +52,13 @@
 <center><input type="submit" class="btn btn-info" value="Home Page"></a></center>
 </div>
 </div>
+<
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+<div id="footer2"><center>&copy 2016 Final Level (Team 8)</center></a></div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="./assets/javascript/app.js"></script>
     </body>
 
     </html>
